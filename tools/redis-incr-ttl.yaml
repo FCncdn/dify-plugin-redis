@@ -1,0 +1,56 @@
+identity:
+  name: redis-incr-ttl
+  author: fcncdn
+  label:
+    en_US: Redis Incr And Set Default TTL
+    zh_Hans: Redis Incr And Set Default TTL
+    pt_BR: Redis Incr And Set Default TTL
+description:
+  human:
+    en_US: Redis Incr And Set Default TTL
+    zh_Hans: Redis Incr And Set Default TTL
+    pt_BR: Redis Incr And Set Default TTL
+  llm: Redis Incr And Set Default TTL
+parameters:
+  - name: 'name'
+    type: string
+    required: true
+    label:
+      en_US: 'Name'
+      zh_Hans: 'Name'
+      pt_BR: 'Name'
+    human_description:
+      en_US: 'Redis Name'
+      zh_Hans: 'Redis Name'
+      pt_BR: 'Redis Name'
+    llm_description: 'Redis Name'
+    form: llm
+  - name: 'key'
+    type: string
+    required: true
+    label:
+      en_US: 'Key'
+      zh_Hans: 'Key'
+      pt_BR: 'Key'
+    human_description:
+      en_US: 'Redis Key'
+      zh_Hans: 'Redis Key'
+      pt_BR: 'Redis Key'
+    llm_description: 'Redis Key'
+    form: llm
+  - name: 'ttl'
+    type: number
+    required: false
+    label:
+      en_US: 'TTL, default 60s'
+      zh_Hans: 'TTL, 默认 60 秒'
+      pt_BR: 'TTL, default 60s'
+    human_description:
+      en_US: 'Default TTL'
+      zh_Hans: 'TTL, 默认 60 秒'
+      pt_BR: 'TTL, default 60s'
+    llm_description: 'TTL'
+    form: llm
+extra:
+  python:
+    source: tools/redis-incr-ttl.py

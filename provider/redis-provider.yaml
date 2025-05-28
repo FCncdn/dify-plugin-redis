@@ -1,6 +1,6 @@
 identity:
-  author: eft
-  name: redis
+  author: fcncdn
+  name: f_redis
   label:
     en_US: Redis
     zh_Hans: Redis
@@ -50,6 +50,8 @@ credentials_for_provider:
 tools:
   - tools/redis-set.yaml
   - tools/redis-get.yaml
+  - tools/redis-set-keepttl.yaml
+  - tools/redis-incr-ttl.yaml
 extra:
   python:
     source: provider/redis-provider.py

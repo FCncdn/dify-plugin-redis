@@ -175,3 +175,6 @@ cython_debug/
 
 # Vscode
 .vscode/
+
+tests/
+poetry.lock

@@ -1,11 +1,20 @@
 from typing import Any, Sized
 
 import redis
+from pydantic import AfterValidator
 from redis.client import Redis
 from rediscluster import RedisCluster
+from typing_extensions import Annotated
 
 DEFAULT_HOST = '127.0.0.1'
 DEFAULT_PORT = 6379
+
+def _not_empty_str(v: str) -> str:
+    if v == "":
+        raise ValueError("Value cannot be empty")
+    return v
+
+NotEmptyStr = Annotated[str, AfterValidator(_not_empty_str)]
 
 
 def default_if_empty(value: Any, default=None) -> Any:

@@ -1,7 +1,7 @@
-version: 1.0.0
+version: 1.0.2
 type: plugin
-author: eft
-name: redis
+author: fcncdn
+name: f_redis
 label:
   en_US: Redis
   ja_JP: Redis
